@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Trabalhando com Array
+        // 1 Forma: Objeto
+        let nomes = new Array();
+        nomes[0] = "Davi Brito"
+        nomes[1] = "Gustavo"
+        nomes[2] = "Isabela"
+        nomes[3] = "Anne"
+        nomes[4] = "Igor"
+        nomes[5] = "Lívia"
+        nomes[5] = "Gabis"
+
+        // Demonstrar elemento individual
+        document.writeln(`Nomes: ${nomes[1]}`)
+        document.writeln("<p>Nome: " + nomes[0] + "</p>")
+        // Loop
+        document.write("<hr>")
+        nomes.forEach(element =>{
+            document.write(`<p>${element}</p>`)
+        })
+
+        document.write("<hr>")
+        //contar quantos elemnetos tem o array
+
+        let qtArray = nomes.length
+        document.write (`Total: ${qtArray}`)
+
+        for(let i = 0; i <= nomes.lenght; i++){
+            document.writeln(`<p>Nome: ${nomes[i]} </p>`)
+        }
+        document.write("<hr>")
+
+        //2 forma
+        let Filmes =[
+            "filme 1",
+            "filme 2",
+            "filme 3",
+        ]
+        document.writeln("<hr>");
+
+        Filmes.map((element)=>{
+            document.write(`<p>${element}</p>`)
+        });
+        document.writeln("<hr>");
+        
+        //forma 3
+        let carro = [];
+        carro[0] = "Opala";
+        carro[1] = "Chevette";
+        carro[2] = "Fusca";
+        carro[3] = "Byd";
+        carro[4] = "Impala 1967";
+        carro[5] = "Fiat 147";
+        carro[6] = "Aston Martin"
+        for(const key in carro){
+            document.write(`<p>${carro[key]}</p>`)
+        }
+        document.writeln("<hr>");
+
+        const points = [4];
+        points[0] = ".0";
+        points[1] = ".1";
+        points[2] = ".2";
+        points[3] = ".3";
+        points[4] = ".4";
+        for(const key in carro){
+            document.write(`<p>${points[key]}</p>`)
+        }
+
+    </script>
+</body>
+</html>
