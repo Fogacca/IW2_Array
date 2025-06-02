@@ -24,35 +24,22 @@
         let email = document.getElementById("email")
         
         bt.onclick = function(){
-            //alert(nome.value, email.value)
-            // Array pré defenido
-
             cad.push({
                 nome: nome.value,
                 email: email.value
             })
-            cad.forEach(element =>{
-                //document.write(`<p> ${element} </p>`)
-                //console.log(element)
-            })
 
-            //console.log(cad[0].nome)
-            //console.log(cad[1].nome)
-
-            // for (const key in cad) {
-            //     console.log(cad[key])
-            // }
-
-            //Criar elemento dinamico
+            // Log no console do cadastro atual
+            console.log("Nome:", nome.value, "| Email:", email.value);
 
             cad.forEach(element => {
                 let p = document.createElement('p')
-                let texto = document.createTextNode("Mostrar os nomes, email")
-                //let texto.innerText = element.
+                let texto = document.createTextNode(`Nome: ${element.nome} | Email: ${element.email}`)
                 p.appendChild(texto)
-                let views = document.body
-                views.appendChild(texto)
+                document.body.appendChild(p)
             })
+
+            cad = []
         }
 
     </script>
