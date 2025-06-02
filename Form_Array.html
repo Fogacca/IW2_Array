@@ -24,7 +24,7 @@
         let email = document.getElementById("email")
         
         bt.onclick = function(){
-            alert(nome.value, email.value)
+            //alert(nome.value, email.value)
             // Array pré defenido
 
             cad.push({
@@ -33,7 +33,25 @@
             })
             cad.forEach(element =>{
                 //document.write(`<p> ${element} </p>`)
-                console.log(element)
+                //console.log(element)
+            })
+
+            //console.log(cad[0].nome)
+            //console.log(cad[1].nome)
+
+            // for (const key in cad) {
+            //     console.log(cad[key])
+            // }
+
+            //Criar elemento dinamico
+
+            cad.forEach(element => {
+                let p = document.createElement('p')
+                let texto = document.createTextNode("Mostrar os nomes, email")
+                //let texto.innerText = element.
+                p.appendChild(texto)
+                let views = document.body
+                views.appendChild(texto)
             })
         }
 
